@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="canvas">
+        <nav class="shadow-lg w-full flex justify-between items-center px-11">
+            <div>
+                <div class="h-16 w-16 rounded-full m-2">
+                    <img src="logo.webp" alt="programutvecklare.com" width="120" height="120" >
+                </div>
+            </div>
+            <div>
+                <ul class="flex gap-3 p-3 list-none">
+                    <li>
+                        <a class="no-underline text-xl text-slate-100" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="no-underline text-xl text-slate-100" href="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a class="no-underline text-xl text-slate-100" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+      
+
+         <div class="h-screen w-full bg-transparent flex justify-center items-center">
+
+            <h1 class="animate__animated animate__fadeInLeftBig text-[5rem] max-sm:text-2xl text-amber-200 font-extrabold">Funny Website</h1>
+
+             <p class="transform text-[6rem] max-sm:text-2xl text-lime-200 hover:translate-x-6 font-semibolds -rotate-180 inline-block">Twisted</p>
+
+             <p class="transform text-[8rem] max-sm:text-5xl hover:skew-x-12 text-slate-200 font-semibolds -rotate-90 animate-pulse inline-block">Wicked</p>
+
+            <h1 class="hover:opacity-40 text-[5rem] max-sm:text-2xl transform scale-x-(-1) text-green-200 font-thiun">Interesting....</h1>
+        </div>
+
+
+            <button class="overflow-hidden h-auto w-auto text-4xl max-sm:text-xl font-semibold rounded-lg shadow-lg p-6 bg-amber-100 -bottom-20 text-center text-slate-900 relative z-10">Tell me a joke</button>
+
+
+
+
+        <div class="cardPage min-h-screen w-full gap-4 items-center justify-center flex flex-wrap max-sm:flex-col absolute top-[100vh]">
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/1.jpg')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/2.jpg')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/3.jpg')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/4.webp')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/5.webp')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p><p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/6.jpg')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/7.jpg')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+            <div class="card max-sm:w-full z-20 h-[55vh] w-[20%] ">
+                <div class="bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 bg-[url('/8.jpg')]">
+                    <p class="text-3xl text-amber-50 font-bold"></p>
+                    <p class=" text-amber-50 font-bold"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="joke" class="jokepage w-full min-h-full">
+            hej
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#canvas",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffffff,
+            backgroundColor: 0x1e1a25,
+            points: 20.00,
+            maxDistance: 22.00,
+            spacing: 16.00,
+            showDots:false,
+        });
+    </script>
+    
+    <script src="app.js"></script>
+</body>
+</html>

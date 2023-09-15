@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#time,
+#date {
+    font-size: 3rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+div {
+    flex-wrap: wrap;
+
+}
+
+#bla,
+#tid,
+.class {
+    font-size: 1.5rem;
+    font-family: monospace;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins&display=swap');
+
+#title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+#description {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+
+}
+
+body {
+    background-image: url(https://th.bing.com/th/id/R.4ae3841a10991a6041ce3364a5610c90?rik=hofjQHksZABhbA&riu=http%3a%2f%2fwww.ballaratcat.com.au%2fwp-content%2fuploads%2f2014%2f03%2flots-of-cats.jpg&ehk=ThfbrFYSxGRiTBxb%2bgbGUM2ae8GF%2bsYU7uuaG9TyOhI%3d&risl=&pid=ImgRaw&r=0);
+    font-family: 'Poppins', sans-serif;
+}
+
+.button {
+    display: inline;
+    width: 50px;
+}
+
+
+
+.container {
+    background-color: rgba(240, 210, 165, 0.7);
+    width: 30%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.signup {
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(251, 211, 166);
+    border-radius: 50px;
+}
+
+#survey-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px;
+    background-color: antiquewhite;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#submit {
+    display: block;
+    margin: 5px auto;
+    background-color: antiquewhite;
+    border: 3px solid rgb(159, 108, 51);
+    font-family: 'Poppins', sans-serif;
+    width: 25%;
+    border-radius: 10px;
+}

@@ -1,0 +1,23 @@
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    position: relative;
+    top: 350px;
+    left: 20px;
+    animation: move 5s infinite;
+
+
+}
+
+@keyframes move {
+    from {
+        bottom: 20px;
+        transform: rotate(365deg);
+    }
+
+    to {
+
+        left: 1170px;
+    }
+}

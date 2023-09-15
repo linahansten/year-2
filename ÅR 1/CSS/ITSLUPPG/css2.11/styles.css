@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.b,
+.r,
+.y {
+    width: 34%;
+    height: 100vh;
+
+
+}
+
+.b {
+    background-color: black;
+}
+
+.y {
+    background-color: yellow;
+
+}
+
+.r {
+    background-color: red;
+}

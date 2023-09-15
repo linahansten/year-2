@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+}
+
+.vit {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+}
+
+.blue1 {
+    height: 300px;
+    width: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    left: 130px;
+}
+
+.blue2 {
+    background-color: blue;
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: 100px;
+}

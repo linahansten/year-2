@@ -1,0 +1,87 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html{
+  color-scheme:dark light;
+}
+@media(prefers-color-scheme:dark){
+
+}
+@media(prefers-color-scheme:light){
+
+} */
+/*For dark/light mode*/
+body {
+    display: flex;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    background-color: #f8f0fc;
+}
+
+h1 {
+    font-size: 4.4rem;
+    font-family: 'Passion One', cursive;
+}
+
+#hcolor {
+    color: #f15bb5;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 28px;
+
+}
+
+#buttons {
+    margin-top: 28px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 18px 28px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    background-color: white;
+    color: #f15bb5;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0/0.1), 0 1px 2px -1px rgb(0 0 0/0.1);
+}
+
+#primary {
+    background-color: #f15bb5;
+    color: white;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    main,
+    img {
+        height: 100%;
+    }
+
+    main {
+        padding: 24px;
+    }
+}

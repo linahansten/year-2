@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Serif+HK:wght@300&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+
+#card {
+    height: 280px;
+    width: 480px;
+    padding: 20px;
+    background-image: url(low-poly-grid-haikei.png);
+    background-size: cover;
+
+    border: 4px solid black;
+    border-radius: 10px;
+
+}
+
+img {
+    border-radius: 10px;
+    border: 2px solid black;
+
+}
+
+.sheesh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: 'Noto Serif HK', serif;
+}
+
+.text,
+.text2,
+.text3 {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    padding-right: 6px;
+    color: rgb(145 121 0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.one {
+    font-size: x-large;
+    font-family: 'Aboreto';
+    text-decoration: underline;
+
+}
+
+.two {
+    font-size: xx-large;
+    font-family: 'Aboreto';
+    margin-top: 50px;
+}
+
+
+.line {
+    width: 520px;
+    margin-left: -20px;
+    background-color: black;
+    height: 2px;
+    margin-top: 20px;
+
+}

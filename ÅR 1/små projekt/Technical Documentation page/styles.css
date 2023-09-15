@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Nav */
+#navbar {
+    height: 130vh;
+    width: 20%;
+    background-color: #727272;
+}
+
+.navheader {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+}
+
+.via {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.navheader p {
+    padding-top: 20px;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-top: 7px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: 100%;
+    color: white;
+}
+
+.navfooter {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lina {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.navfooter p {
+    padding-top: 20px;
+}
+
+/* Main */
+
+#main-doc {
+    height: 130vh;
+    width: 80%;
+    background-color: #CECECE;
+    display: block;
+}
+
+.main-section {
+    display: flex;
+    margin-top: 50px;
+    padding-left: 50px;
+    width: 100%;
+    display: block;
+}
+
+header {
+    font-family: 'PT Serif', serif;
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    text-decoration: underline;
+    font-size: 25px
+}
+
+#evidence_1 {
+    flex-direction: column;
+    display: block;
+}
+
+.p {
+    font-family: 'Work Sans', sans-serif;
+    width: 350px;
+    margin-top: 10px;
+    font-size: 18px;
+    display: block;
+}
+
+.statment {
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
+    font-size: 20px;
+}
+
+li {
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+#evidence_2 {
+    margin-top: -220px;
+    flex-direction: column;
+}
+
+.statment2 {
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#evidence_3 {}

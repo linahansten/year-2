@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+        Valorant survey
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 id="title">
+            Valorant Survey
+        </h1>
+        <p id="description">
+            Please be honest with your anwser and thank you for your time
+        </p>
+    </header>
+
+    <div class="container">
+        <form id="survey-form">
+            <label class="label">1. Its pistol round what do you get?<input id="name" type="text"
+                    placeholder="Pistol Round" required></input></label>
+            <label class="label">2. what's the best rifle in your opinion?<input id="email" type="email"
+                    placeholder="Rifle" required></input></label>
+            <label class="label">3. How much credit do you use when you full buy?<input id="number" type="number"
+                    min="0" max="10000" placeholder="Credit" required></input></label>
+            <label id="name-label" class="label">4. What map is your favorite?<input type="text" placeholder="Map"
+                    required></input></label>
+            <label id="email-label" class="label">
+                5. What agent do you use the most?<input type="text" placeholder="Agent" required></input>
+            </label>
+            <img width="100px" src="shheeesshh 2" alt="">
+            <label id="number-label" class="label">
+                6.Do you have a pocket Sage?
+            </label>
+            <select id="dropdown">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No :(</option>
+            </select>
+            <label class="label">7. Are you a Pocket Sage?</label>
+            <label><input type="radio" name="button" class="button" value="yes">Yes</label>
+            <label><input type="radio" name="button" class="button" value="no">No</label>
+            <label class="label">8. What rank are you?</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="iron">Iron</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="bronze">Bronze</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="silver">Silver</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="gold">Gold</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="platinum">Platinum</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="diamond">Diamond</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="ascendant">Ascendant</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="immortal">Immortal</label>
+            <label><input type="checkbox" name="checkbox" class="checkbox" value="radiant">Radiant</label>
+            <label class="label">Anything else you'd like to
+                add?</label>
+            <textarea name="text" id="text" cols="55" rows="2"></textarea>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

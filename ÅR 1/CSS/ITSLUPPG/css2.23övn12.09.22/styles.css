@@ -1,0 +1,75 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container {
+    height: 300px;
+    width: 270px;
+    padding: 20px;
+    background-color: white;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+}
+
+p,
+input {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+}
+
+
+input {
+    width: 250px;
+    height: 30px;
+
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+
+input:hover {
+    border: 2px solid;
+    border-color: blue;
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+.bars {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    font-size: small;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 3px;
+    border: 1px gray solid;
+}
+
+.bars:hover {
+    background-color: rgb(75, 75, 224);
+}
+
+.blue {
+    color: blue;
+
+}
+
+.submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+.log {
+    margin-top: 10px;
+}

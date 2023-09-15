@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#canvas{
+    height: 300vh;
+}
+.frontPage{
+    width: 100vw;
+    height: 100vh;
+}
+.cardPage{
+    width: 100vw;
+    height: 100vh;
+}
+.jokePage{
+    width: 100vw;
+    height: 100vh;
+}

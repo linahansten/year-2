@@ -1,0 +1,32 @@
+.a,
+.b,
+.c,
+.d,
+.e {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.a {
+    background-color: black;
+}
+
+.b {
+    background-color: gray;
+    width: 50%;
+}
+
+.c {
+    background-color: lightgrey;
+    width: 25%;
+}
+
+.d {
+    background-color: red;
+    width: 500px;
+}
+
+.e {
+    background-color: blue;
+    width: 250px;
+}

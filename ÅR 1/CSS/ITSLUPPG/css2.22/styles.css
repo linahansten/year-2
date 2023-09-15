@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+.blue {
+    background-color: blue;
+    height: 100vh;
+    width: 100%;
+}
+
+.green {
+    background-color: green;
+    height: 100vh;
+    width: 100%;
+}
+
+.red {
+    background-color: red;
+    height: 100vh;
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .blue,
+    .red,
+    .green {
+        width: 50%;
+        height: 50%;
+    }
+
+    .red {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .blue,
+    .red,
+    .green {
+        width: 100%;
+        height: auto;
+    }
+}
