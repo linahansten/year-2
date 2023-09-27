@@ -10,8 +10,6 @@ setInterval(update, 1000)
 // Skapa funktionen
 function update() {
     const date = new Date();
-
-
     dateElement.textContent = date.toLocaleDateString("sv-SE");
     timeElement.textContent = date.toLocaleTimeString("sv-SE");
 }

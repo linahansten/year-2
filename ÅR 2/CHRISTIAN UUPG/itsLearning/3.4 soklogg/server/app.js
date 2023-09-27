@@ -53,8 +53,8 @@ server.post("/admin/search", (req, res) => {
     }
 })
 server.get("/search", (req, res) => {
-    const searches = req.cookies.searches || [];
-    res.send("Search saved! Searches: " + JSON.stringify(searches));
+    const searches = req.cookies.searches || []
+    res.send("Search saved! Searches: " + JSON.stringify(searches))
 })
 
 
