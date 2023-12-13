@@ -1,50 +1,56 @@
-import { useState } from "react"
+import { useState } from "react";
 
-export default function App() {
+const WeatherApp = () => {
+  const [country, setCountry] = useState("");
+  const [temperature, setTemperature] = useState("");
+  const [weatherDescription, setWeatherDescription] = useState("");
+  const [error, setError] = useState("");
 
-  const [celsius,setCelsius] = useState("")
-  const [fahrenheit,setFahrenheit] = useState("")
+  const apiKey = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}";
 
-  const onCelsiusChange = (value: string) => {
-    setCelsius(value)
-    const celsiusNumber = Number(value)
-//toFixed changes Number to string and then you can choose how many decimals you want
-    setFahrenheit(((celsiusNumber * 9/5) + 32).toFixed(0))
-  }
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`
+      );
+      const data = await response.json();
 
-  const onFahrenheitChange = (value: string) => {
-    setFahrenheit(value)
-
-    const fahrenheitNumber = Number(value)
-    setCelsius(((fahrenheitNumber - 32) *5/9).toFixed(0))
-  }
+      if (response.ok) {
+        setTemperature(data.main.temp);
+        setWeatherDescription(data.weather[0].description);
+        setError("");
+      } else {
+        setError(data.message);
+      }
+    } catch (error) {
+      setError("Error fetching weather data");
+    }
+  };
 
   return (
-    <div className="flex flex-col gap-6 mx-auto max-w-md p-8">
-      <h1 className="text-3xl font-light uppercase">Temperature converter</h1>
-      <div className="flex gap-4">
-        <label className="flex flex-col gap-1">
-          <span className="uppercase text-md font-medium tracking-wide">Celsius</span>
-          <input type="text" className="px-3 py-2 rounded border bg-white outline-0 ring-emerald-100 ring-0 focus:border-emerald-500 focus:ring-2" 
-
-          value = {celsius}
-          onChange={e => onCelsiusChange(e.target.value)}
-
+    <div>
+      <h1>Weather App</h1>
+      <div>
+        <label>
+          Enter Country:
+          <input
+            type="text"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
           />
         </label>
-        <label className="flex flex-col gap-1">
-          <span className="uppercase text-md font-medium tracking-wide">Fahrenheit</span>
-          <input type="text" className="px-3 py-2 rounded border bg-white outline-0 ring-emerald-100 ring-0 focus:border-emerald-500 focus:ring-2" 
-          
-          value = {fahrenheit}
-          onChange={e => onFahrenheitChange(e.target.value)}
-
-          />
-        </label>
+        <button onClick={handleSearch}>Search</button>
       </div>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {temperature && weatherDescription && (
+        <div>
+          <h2>Weather in {country}</h2>
+          <p>Temperature: {temperature} °C</p>
+          <p>Weather: {weatherDescription}</p>
+        </div>
+      )}
     </div>
   );
-}
+};
 
-
-
+export default WeatherApp;

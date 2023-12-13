@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form action="/products" method="post">
+        <input type="number" name="id" id="" placeholder="Id">
+        <input type="text" name="name" id="" placeholder="Name">
+        <input type="number" name="price" id="" placeholder="Price">
+        <input type="number" name="stock" id="" placeholder="Stock">
+        <button>Send</button>
+    </form>
+    <h1>Update Product</h1>
+    <form action="/update" method="post">
+        <input type="number" name="id" id="" placeholder="Id on product">
+        <input type="text" name="newName" id="" placeholder="New name">
+        <button>Update</button>
+    </form>
+    <h1>Delete product</h1>
+    <form action="/delete" method="post">
+        <input type="number" name="id" id="" placeholder="Id on product">
+        <button>Delete</button>
+    </form>
+</body>
+</html>
