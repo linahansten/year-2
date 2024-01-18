@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
+
 function App() {
-  // State to store Pokemon data
   const [data, setData] = useState();
-
-  // State to store the search term entered by the user
   const [searchTerm, setSearchTerm] = useState('');
+  const [pokemon, setPokemon] = useState();
 
-  // Function to fetch Pokemon data from the PokeAPI
+
+  // Fetch Pokemon data from the PokeAPI
   const fetchData = async () => {
     try {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchTerm}`);
-      
+     
       if (response.ok) {
-        // Parse the response JSON and set the data state
+        // Parse the response JSON and set the pokemon state
         const result = await response.json();
-        setData(result);
+        setPokemon(result);
       } else {
         console.error('Error fetching data:', response.status, response.statusText);
       }
@@ -25,20 +25,21 @@ function App() {
     }
   };
 
-  // Effect hook to fetch data when the component mounts
   useEffect(() => {
-    fetchData();
-  }, [searchTerm]); // Fetch data whenever the search term changes
+    if (searchTerm) {
+      fetchData();
+    }
+  }, [searchTerm]);
 
-  // Function to handle the search button click
+  //button click
   const handleSearch = () => {
     fetchData();
   };
 
   return (
     <>
-    <div className="m-4">
-        {/* Input field for the user to enter the Pokemon name */}
+    <div className=" w-screen flex justify-center items-center p-4">
+        {/* Input field */}
         <input
           className="border rounded px-2 py-1"
           placeholder="Search"
@@ -46,68 +47,69 @@ function App() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        {/* Button to trigger the search */}
-      <button className=" bg-slate-200 px-4 py-2 ml-2           rounded"onClick={handleSearch}>Search
+        {/* Button search */}
+      <button className=" bg-slate-300 px-4 py-2 ml-2           rounded"onClick={handleSearch}>Search
       </button>
     </div>
 
       {/* Display Pokemon information if data is available */}
-      {data && (
+      {pokemon && (
         <div className="bg-slate-200 w-screen flex justify-center items-center flex-col p-4">
+
           {/* Pokemon name */}
-          <h2 className="text-2xl font-bold mb-2">{data.name}</h2>
+          <h2 className="text-2xl font-bold mb-2">
+          {pokemon.name}</h2>
           <img
             className="mb-4"
             width="150px"
-            height="150px"
-            src={
-              data && data.sprites ? data.sprites.front_default : ''
-            }
+            style={{ display: 'block', maxWidth: '200px', maxHeight: '200px' }}
+            src={pokemon.sprites.front_default}
+            alt={pokemon.name}
           />
 
           {/* Base Experience, Height, and Weight */}
-          <p>Base Experience: {data.base_experience}</p>
-          <p>Height: {data.height}</p>
-          <p>Weight: {data.weight}</p>
+          <p>Base xp: {pokemon.base_experience}</p>
+          <p>Height: {pokemon.height}</p>
+          <p>Weight: {pokemon.weight}</p>
 
           {/* Abilities */}
           <p>
             Abilities:{' '}
-            {data.abilities
-              ? data.abilities.map((ability) => ability.ability.name).join(', ')
-              : 'N/A'}
+            {pokemon.abilities
+              ? pokemon.abilities.map((ability) => ability.ability.name).join(', ')
+              : ''}
           </p>
 
           {/* Moves */}
-          <p className="mt-4">
+          <div className=' w-52 md:w-2/3 '>
+          <p className="mt-4 ">
             Moves:{' '}
-            {data.moves
-              ? data.moves.map((move) => move.move.name).join(', ')
-              : 'N/A'}
+            {pokemon.moves
+              ? pokemon.moves.map((move) => move.move.name).join(', ')
+              : ''}
           </p>
+          </div>
 
           {/* Stats */}
-          {data.stats && data.stats.length > 0 ? (
+          {pokemon.stats && pokemon.stats.length > 0 ? (
             <p className="mt-4">
               Stats:
               <ul>
-                {data.stats.map((stat) => (
+                {pokemon.stats.map((stat) => (
                   <li key={stat.stat.name}>
                     {stat.stat.name}: {stat.base_stat}
                   </li>
                 ))}
               </ul>
             </p>
-          ) : (
-            <p>No stats available</p>
-          )}
+          ) : ''}
 
           {/* Types */}
           <p className="mt-4">
             Types:{' '}
-            {data.types
-              ? data.types.map((type) => type.type.name).join(', ')
-              : 'N/A'}
+            {pokemon.types
+              ? pokemon.types.map((type) => type.type.name).join(', ')
+              : ''}
           </p>
         </div>
       )}
