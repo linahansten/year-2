@@ -18,11 +18,14 @@ function App() {
 
     if (catchChance <= pokeCaught) {
       setCatchStatus("caught")
-      console.log(catchChance, pokeCaught + " caught")
+      console.log("caught")
       saveCaughtPokemon(pokemon)
+      renderPokemon()
+      setCatchStatus("")
+
     } else {
       setCatchStatus("escaped")
-      console.log(catchChance, pokeCaught + " escaped")
+      console.log("escaped")
     }
   }
 
@@ -50,18 +53,18 @@ function App() {
 
   useEffect(() => {
     renderPokemon();
-  }, []);
+  }, [console.log("render")]);
 
   const renderPokemon = async() => {
-      const data = await fetchData(getRandom(1, totalPokemons));
-      setPokemon(data);
-  };
+    const data = await fetchData(getRandom(1, totalPokemons));
+    setPokemon(data);
+};
 
-  const fetchData = async (id: number) => {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    const data = await res.json();
-    return data;
-  };
+const fetchData = async (id: number) => {
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  const data = await res.json();
+  return data;
+};
 
   return (
     <div className='w-screen h-screen flex justify-center '>
@@ -69,7 +72,7 @@ function App() {
       <div className='e w-96 flex items-center flex-col rounded py-10 px-14 z-20'>
         <h2 className='font-bold text-center text-white'>A Pokemon appeared. Quick shoot it!!</h2>
         {pokemon && <GetPokemon data={pokemon} />}
-        <img onClick={() => console.log(ifCatched(parseFloat(pokemon.base_experience)))} className='w-32 h-28 cursor-pointer' src="gun.png" alt="" />
+        <img onClick={() => console.log(ifCatched(parseFloat(pokemon.base_experience)))} className='w-32 h-28 cursor-pointer' src="arrow.png" alt="" />
         <p className='text-white'>{catchStatus}</p>
       </div>
     </div>

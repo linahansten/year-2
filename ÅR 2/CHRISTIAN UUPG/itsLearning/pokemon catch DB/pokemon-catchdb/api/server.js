@@ -1,5 +1,6 @@
 const express = require('express')
 const pg = require('pg')
+const cors = require('cors')
 require('dotenv').config()
 
 const db = new pg.Client({
@@ -11,6 +12,7 @@ const db = new pg.Client({
 db.connect().then(res => console.log("connected")).catch(err => console.log(err))
 
 const server = express()
+server.use(cors())
 server.use(express.urlencoded({ extended: true }))
 server.use(express.json())
 
@@ -28,7 +30,6 @@ server.post('/api/pokemon', async (req, res) => {
             'INSERT INTO caught_pokemon (name, base_experience) VALUES ($1, $2) RETURNING *',
             [name, base_experience]
         );
-
         res.json({ msg: 'Pokemon saved successfully', data: result.rows[0] });
     } catch (error) {
         console.error('Error while saving Pokemon:', error);
